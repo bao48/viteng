@@ -31,3 +31,10 @@ It is thus difficult for programs to distinguish where exactly the signal starts
 
 This program also provides some helpful secondary functions. First, all the clicks are marked with red dots to keep track of the clicks, but also there is the option to "backspace" by using the spacebar. It is necessary however, to click in the same order when clicking horizontally. Thus if you like to click all the topmost points first going from left to right, you also must go from left to right for the bottommost points. Clicking all the top ones first or all the bottom ones first can be switched while analyzing by using the codes in the function, as can clicking vertically vs. clicking horizontally.
 ![vt_analyzing](https://user-images.githubusercontent.com/31197028/42730013-4c024a7e-87b8-11e8-8fba-c547bd2f66b9.jpg)
+
+## Built with
+MATLAB 9.4
+
+## Useful resources
+* Finding peaks in data: https://www.mathworks.com/help/signal/ug/find-peaks-in-data.html
+* Recording mouse clicks: https://www.mathworks.com/help/matlab/ref/ginput.html
