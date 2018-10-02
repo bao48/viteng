@@ -32,11 +32,12 @@ groupheights = zeros(1, 1);
 allheights = zeros(1, r);
 
 data_shortened = zeros(20000, 1);
-for R1 = 1:c
-    for R2 = 1:r
+
+for R1 = 1:r
+    for R2 = 1:c
         time = reshape(1:20000, 20000, 1);
         time = time./500;
-        data_cell = Vt{R2, R1};
+        data_cell = Vt{R1, R2};
         data_double = cell2mat(data_cell);
         data_shortened = data_double(1:20000, 1);
 
@@ -52,7 +53,6 @@ for R1 = 1:c
                 break;
             elseif action == 32
                 % space to delete
-                
                 [a, b] = size(tempx);
                 tempx(a) = [];
                 tempy(a) = [];
@@ -111,6 +111,6 @@ for R1 = 1:c
     peakheight = [];
     groupheights = zeros(peaknum*3, 1);
 end
-avg = mean(groupheights);
-sd = std(groupheights);
+avg = mean(allheights);
+sd = std(allheights);
 end
